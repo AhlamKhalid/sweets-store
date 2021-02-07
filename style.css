@@ -1,0 +1,28 @@
+/* general */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --pink: #f2a7a0;
+  --beige: #f2eed8;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: "Balsamiq Sans", cursive;
+  background-color: var(--beige);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
