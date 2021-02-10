@@ -37,6 +37,44 @@ header {
 
 .logo {
   font-size: 16px;
-  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* categories */
+.categories-wrapper {
+  margin: 56px 0;
+  display: grid;
+  grid-gap: 32px;
+  /* min = circle size */
+  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+  justify-items: center;
+}
+
+.category-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  border: 2px solid var(--black);
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+}
+
+.category-circle::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -7px;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-color: var(--pink);
+  z-index: -1;
+}
+
+.category-name {
+  text-align: center;
+  font-size: 14px;
   text-transform: uppercase;
 }
