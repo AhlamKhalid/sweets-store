@@ -21,6 +21,19 @@ body {
   background-color: var(--beige);
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -28,7 +41,7 @@ body {
 }
 
 /* header */
-header {
+.header {
   padding-top: 32px;
   display: flex;
   align-items: center;
@@ -38,6 +51,10 @@ header {
 .logo {
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.nav {
+  display: none;
 }
 
 /* categories */
@@ -77,4 +94,149 @@ header {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+/* sections */
+.section {
+  padding-bottom: 32px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-name {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.section-header .section-cta {
+  display: none;
+}
+
+.section-content {
+  display: none;
+}
+
+.section-image {
+  height: 238px;
+  border-radius: 10px;
+  /* x, y, blur, color */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  padding: 24px;
+  /* align cta */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.holiday-section {
+  background: linear-gradient(
+      360deg,
+      rgba(26, 26, 26, 0.75) 0%,
+      rgba(26, 26, 26, 0) 100%
+    ),
+    url("./img/holiday-sweet-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.trip-section {
+  background: linear-gradient(
+      360deg,
+      rgba(26, 26, 26, 0.75) 0%,
+      rgba(26, 26, 26, 0) 100%
+    ),
+    url("./img/trip-sweet-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-cta {
+  font-size: 14px;
+  /* align text with arrow */
+  display: flex;
+  align-items: center;
+}
+
+.section-cta-text {
+  margin-right: 8px;
+}
+
+.beige-color {
+  color: var(--beige);
+}
+
+/* media queries */
+@media screen and (min-width: 768px) {
+  /* header */
+  .header {
+    padding-top: 40px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav-item {
+    display: inline-block;
+    padding: 0 16px;
+  }
+
+  .nav-item:last-child {
+    padding-right: 0;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .nav-link.active {
+    border-bottom: 2px solid var(--black);
+  }
+
+  /* sections */
+  .section-image {
+    display: none;
+  }
+
+  .section-content {
+    display: grid;
+    grid-gap: 40px;
+    /* min = minimum width allowed for image */
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  }
+
+  .sweet-image {
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    /* fill whole width */
+    width: 100%;
+    height: 187px;
+    object-fit: cover;
+  }
+
+  /* it is flex on small screen */
+  .section-header .section-cta {
+    display: flex;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pink-color {
+    color: var(--pink);
+  }
 }
