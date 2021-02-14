@@ -76,6 +76,7 @@ img {
   height: 65px;
   border-radius: 100%;
   border: 2px solid var(--black);
+  background-color: transparent;
   position: relative;
   display: grid;
   place-items: center;
@@ -164,6 +165,9 @@ img {
   display: flex;
   align-items: center;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
 }
 
 .section-cta-text {
