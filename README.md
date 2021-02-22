@@ -10,7 +10,7 @@ Building a landing page for sweets store with HTML & CSS. I'm using flexbox, gri
 
 ### YouTube tutorial
 
-[Landing page for sweets store - HTML & CSS]()
+[Landing page for sweets store - HTML & CSS](https://youtu.be/oLAuLQkIaMY)
 
 ### Run
 
